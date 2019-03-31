@@ -1,10 +1,10 @@
-### INVESTIGATION - MASS WEB APPLICATION ATTACK TARGETING AMAZON LIGHTSAIL WEBSERVER NETBLOCKS
+# INVESTIGATION - MASS WEB APPLICATION ATTACK TARGETING AMAZON LIGHTSAIL WEBSERVER NETBLOCKS
 
 Variant: Win.Exploit.EQGRP-6322722-0 and generic multi-platform hydra.php webshell
 Aggrieved Party: "LULLC" owned by a "CTL"
 Motives of attackers: Cryptomining campaigns, banking trojans, Windows botnets, Remote Desktop and VNC servers
 
-# Notes:
+### Notes:
 
 There may be multiple sub-factions with different objectives using the same ThinkPHP Remote Code Execution exploit. Each group has a different role, and their own separate web-delivery servers related to the hognoob.se
 
@@ -51,7 +51,7 @@ This guy basically failed twice ONLY BY A HAIR. Had my document/webroot/webapp d
 
 Before I stopped maintaining my website I switched it over to a static site generator called Pelican. Which reduced my attack surface even further. The only source of frameworks and scripting languages for an attacker is my webroot directory.
 
-# After incident report, injuries, and damages:
+### After incident report, injuries, and damages:
 
 I believe I am fine and uninjured.
 
@@ -77,17 +77,19 @@ There are much more hosts related to that domain hognoob.se because the attacker
 
 ![](https://raw.githubusercontent.com/tanc7/investigation.fid.hognoob.se/master/pics/Screenshot%20from%202019-03-30%2011-32-39.png)
 
-# URL to original report of ThinkPHP to cmd.exe to Powershell to Cryptominer/Windows Botnet Malware
-# That targets webpages with index.php discovered in root directory(or simply brutes a list regardless of whether or not they even properly enumerated the webserver and OS)
+### URL to original report of ThinkPHP to cmd.exe to Powershell to Cryptominer/Windows Botnet Malware That targets webpages with index.php discovered in root directory(or simply brutes a list regardless of whether or not they even properly enumerated the webserver and OS)
 
 https://www.hybrid-analysis.com/sample/c57371c9cd07cc91acad61f313991658979e9cd90ef76c7da1e4782c6886eba9?environmentId=100
 
-`?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=id` Command string sent by attacker, actually as a GET request and not a POST or PUT. It requires the victim to have ThinkPHP installed with a webapp directory called think\app in your documentroot or webroot. It is used as https://domain.com/index.php?s=$payloadstring
+`?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=id` 
 
-### DISCOVERED A HANDLE ON POSSIBLE C2 SERVER ###
+Command string sent by attacker, actually as a GET request and not a POST or PUT. It requires the victim to have ThinkPHP installed with a webapp directory called think\app in your documentroot or webroot. It is used as https://domain.com/index.php?s=$payloadstring
+
+### DISCOVERED A HANDLE OR IDENTITY ON POSSIBLE C2 SERVER ###
 
 A nmap FIN scan on one of the linked IP addresses to a dynamic analysis of the download.exe binary from hybrid-analysis.com revealed a hidden remote desktop port 3386. We also discovered a possible handle from the SSL certificate's CN. 
 
+<code>
 3389/tcp  open          ssl/ms-wbt-server? tcp-response
 | ssl-cert: Subject: commonName=stephov_107805
 | Issuer: commonName=stephov_107805
@@ -116,9 +118,11 @@ A nmap FIN scan on one of the linked IP addresses to a dynamic analysis of the d
 | NPAhLFEuLy3CIz8Il+eD0tvU1IU0OtloynLBb9tkGTafrXJqbInmH57QuQhquF48
 | WlUZYGInGyogCDBkQvRwurYVUgpeCNxexLmRhU4vwexMF0Zimg7qK342ArzMgyKi
 |_-----END CERTIFICATE-----
+</code>
 
 This host is one of the older IP's 195.128.126.241 associated with the hognoob.se domain according to hybrid-analysis.com as it contacted to download the download.exe stager. It has since, been under a new domain in less than two weeks after initial discover on malware research websites. It changed from hognoob.se to energoresurs.net
 
+<code>
 49157/tcp open|filtered tcpwrapped         no-response
 Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
 OS fingerprint not ideal because: Timing level 5 (Insane) used
@@ -143,5 +147,4 @@ IP ID Sequence Generation: Randomized
 TRACEROUTE
 HOP RTT       ADDRESS
 1   102.07 ms mail.energoresurs.net (195.128.126.241)
-
-
+</code>
