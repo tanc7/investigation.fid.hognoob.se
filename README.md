@@ -17,6 +17,40 @@ The one that has affected me is a Windows variant that failed to land. It howeve
 5. Downloads about 26 to 54 different stagers that reconstitute into the malware
 6. Is primarily written in Java, JSP pages, Powershell, cmd.exe, and PHP and uses the webclient on Windows to download stagers
 
+
+### INCIDENT ###
+
+Notes:
+
+On March 25/26th, a visitor to my website delivered a web application attack. None of the commands he issued ever worked. Like he was basically going off a list of webservers and just casting a fishing net in his hacking campaign. He wrongly assumed. That my server was Windows, and running ThinkPHP. 
+
+![](https://raw.githubusercontent.com/tanc7/investigation.fid.hognoob.se/master/pics/Screenshot%20from%202019-03-30%2010-18-54.png)
+
+The attacker doesn't seem to know that I run Ubuntu. You see, on my website, I installed my own backdoor that is encrypted and obfuscated and requires a specific client to connect with. My password to interact with that backdoor is longer than 12 characters. It is designed as a "insurance policy" in the event that I was completely compromised and locked out of my own server.
+
+The attacker used my internal website backdoor index.php webshell unsuccessfully (he doesn't know my password or have my client) to invoke PHP commands with a not-installed ThinkPHP framework to download cmd.exe for Windows. It returned HTTP code 400 (failure).
+
+
+https://securitynews.sonicwall.com/xmlpost/thinkphp-remote-code-execution-rce-bug-is-actively-being-exploited/
+
+But had it worked, the rest of the command would have..
+
+1. Used the cmd.exe RFI binary to run a powershell command
+2. Which then downloads download.exe stager from http://fib.hognoob.se/download.exe
+3. Renames it to C:/Windows/Temp/{randomstring}.exe
+
+A second attack string repeats the same ThinkPHP exploit to download 
+
+1. A webshell into the webroot directory called hydra.php
+2. The attacker failed again due to my directory permissions and htaccess policies
+
+
+https://www.alibabacloud.com/blog/threat-alert-multiple-cryptocurrency-miner-botnets-start-to-exploit-the-new-thinkphp-vulnerability_594369
+
+This guy basically failed twice ONLY BY A HAIR. Had my document/webroot/webapp directory had ThinkPHP installed (I do not. I have basic PHP7 and it does not enable anything else except JavaScript, Bootstrap, CSS, and HTML) with bad file/directory permissions with PHP support enabled, the attack may have worked.
+
+Before I stopped maintaining my website I switched it over to a static site generator called Pelican. Which reduced my attack surface even further. The only source of frameworks and scripting languages for an attacker is my webroot directory.
+
 # After incident report, injuries, and damages:
 
 I believe I am fine and uninjured.
@@ -40,6 +74,8 @@ hognoob.se domain with dynamic DNS. Over 5 IP's were registered and hosting payl
 There are much more hosts related to that domain hognoob.se because the attackers are constantly shifting their origin IP every couple of days during their mass cyber attack campaign.
 
 *A assumption. The initial attack strings, a GET request originated from this IP. It could be anything with a Chinese public IP. Even a VPN. It's a Chinese ISP.
+
+![](https://raw.githubusercontent.com/tanc7/investigation.fid.hognoob.se/master/pics/Screenshot%20from%202019-03-30%2011-32-39.png)
 
 # URL to original report of ThinkPHP to cmd.exe to Powershell to Cryptominer/Windows Botnet Malware
 # That targets webpages with index.php discovered in root directory(or simply brutes a list regardless of whether or not they even properly enumerated the webserver and OS)
@@ -108,36 +144,4 @@ TRACEROUTE
 HOP RTT       ADDRESS
 1   102.07 ms mail.energoresurs.net (195.128.126.241)
 
-
-
-### INCIDENT ###
-
-Notes:
-
-On March 25/26th, a visitor to my website delivered a web application attack. None of the commands he issued ever worked. Like he was basically going off a list of webservers and just casting a fishing net in his hacking campaign. He wrongly assumed. That my server was Windows, and running ThinkPHP. 
-
-The attacker doesn't seem to know that I run Ubuntu. You see, on my website, I installed my own backdoor that is encrypted and obfuscated and requires a specific client to connect with. My password to interact with that backdoor is longer than 12 characters. It is designed as a "insurance policy" in the event that I was completely compromised and locked out of my own server.
-
-The attacker used my internal website backdoor index.php webshell unsuccessfully (he doesn't know my password or have my client) to invoke PHP commands with a not-installed ThinkPHP framework to download cmd.exe for Windows. It returned HTTP code 400 (failure).
-
-
-https://securitynews.sonicwall.com/xmlpost/thinkphp-remote-code-execution-rce-bug-is-actively-being-exploited/
-
-But had it worked, the rest of the command would have..
-
-1. Used the cmd.exe RFI binary to run a powershell command
-2. Which then downloads download.exe stager from http://fib.hognoob.se/download.exe
-3. Renames it to C:/Windows/Temp/{randomstring}.exe
-
-A second attack string repeats the same ThinkPHP exploit to download 
-
-1. A webshell into the webroot directory called hydra.php
-2. The attacker failed again due to my directory permissions and htaccess policies
-
-
-https://www.alibabacloud.com/blog/threat-alert-multiple-cryptocurrency-miner-botnets-start-to-exploit-the-new-thinkphp-vulnerability_594369
-
-This guy basically failed twice ONLY BY A HAIR. Had my document/webroot/webapp directory had ThinkPHP installed (I do not. I have basic PHP7 and it does not enable anything else except JavaScript, Bootstrap, CSS, and HTML) with bad file/directory permissions with PHP support enabled, the attack may have worked.
-
-Before I stopped maintaining my website I switched it over to a static site generator called Pelican. Which reduced my attack surface even further. The only source of frameworks and scripting languages for an attacker is my webroot directory.
 
