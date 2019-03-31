@@ -89,7 +89,7 @@ Command string sent by attacker, actually as a GET request and not a POST or PUT
 
 A nmap FIN scan on one of the linked IP addresses to a dynamic analysis of the download.exe binary from hybrid-analysis.com revealed a hidden remote desktop port 3386. We also discovered a possible handle from the SSL certificate's CN. 
 
-<code>
+<pre><code>
 3389/tcp  open          ssl/ms-wbt-server? tcp-response
 | ssl-cert: Subject: commonName=stephov_107805
 | Issuer: commonName=stephov_107805
@@ -118,11 +118,11 @@ A nmap FIN scan on one of the linked IP addresses to a dynamic analysis of the d
 | NPAhLFEuLy3CIz8Il+eD0tvU1IU0OtloynLBb9tkGTafrXJqbInmH57QuQhquF48
 | WlUZYGInGyogCDBkQvRwurYVUgpeCNxexLmRhU4vwexMF0Zimg7qK342ArzMgyKi
 |_-----END CERTIFICATE-----
-</code>
+</code></pre>
 
 This host is one of the older IP's 195.128.126.241 associated with the hognoob.se domain according to hybrid-analysis.com as it contacted to download the download.exe stager. It has since, been under a new domain in less than two weeks after initial discover on malware research websites. It changed from hognoob.se to energoresurs.net
 
-<code>
+<pre><code>
 49157/tcp open|filtered tcpwrapped         no-response
 Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
 OS fingerprint not ideal because: Timing level 5 (Insane) used
@@ -147,4 +147,4 @@ IP ID Sequence Generation: Randomized
 TRACEROUTE
 HOP RTT       ADDRESS
 1   102.07 ms mail.energoresurs.net (195.128.126.241)
-</code>
+</code></pre>
