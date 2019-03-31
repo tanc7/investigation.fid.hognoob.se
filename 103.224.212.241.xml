@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Mar 26 12:11:33 2019 as: nmap -F -D RND:10 -Pn -sS -sU -sV -A -O -f -g 53 -&#45;script=http-*,dns-*,ftp-*,imap-*,ssl-*,ssh-*,smtp-*,rtsp-* -oX 103.224.212.241.xml -vv 103.224.212.241 -->
+<nmaprun scanner="nmap" args="nmap -F -D RND:10 -Pn -sS -sU -sV -A -O -f -g 53 -&#45;script=http-*,dns-*,ftp-*,imap-*,ssl-*,ssh-*,smtp-*,rtsp-* -oX 103.224.212.241.xml -vv 103.224.212.241" start="1553627493" startstr="Tue Mar 26 12:11:33 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<scaninfo type="udp" protocol="udp" numservices="100" services="7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49190-49194,49200-49201,65024"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1553627494"/>
+<taskend task="NSE" time="1553627494"/>
+<taskbegin task="NSE" time="1553627494"/>
+<taskend task="NSE" time="1553627494"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1553627494"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1553627494"/>
+<taskbegin task="SYN Stealth Scan" time="1553627494"/>
+<taskend task="SYN Stealth Scan" time="1553627557" extrainfo="100 total ports"/>
+<taskbegin task="UDP Scan" time="1553627557"/>
+<taskend task="UDP Scan" time="1553627701" extrainfo="100 total ports"/>
+<taskbegin task="Service scan" time="1553627702"/>
+<taskprogress task="Service scan" time="1553627769" percent="1.23" remaining="5360" etc="1553633129"/>
+<taskprogress task="Service scan" time="1553627799" percent="2.47" remaining="3832" etc="1553631631"/>
+<taskprogress task="Service scan" time="1553627897" percent="27.16" remaining="523" etc="1553628420"/>
+<taskprogress task="Service scan" time="1553627985" percent="51.85" remaining="263" etc="1553628248"/>
+<taskprogress task="Service scan" time="1553628052" percent="76.54" remaining="108" etc="1553628159"/>
+<taskprogress task="Service scan" time="1553628083" percent="91.36" remaining="37" etc="1553628119"/>
+<taskend task="Service scan" time="1553628088" extrainfo="81 services on 1 host"/>
+<taskbegin task="Traceroute" time="1553628096"/>
+<runstats><finished time="1553628096" timestr="Tue Mar 26 12:21:36 2019" elapsed="603.14" summary="Nmap done at Tue Mar 26 12:21:36 2019; 0 IP addresses (1 host up) scanned in 603.14 seconds" exit="error" errormsg="Unknown address family 0 in build_packet."/><hosts up="1" down="-1" total="0"/>
+</runstats>
+</nmaprun>

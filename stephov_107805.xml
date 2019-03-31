@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 30 20:36:23 2019 as: nmap -Pn -f -F -sF -sV -O -T5 -A -vvv -oX /root/Documents/investigation.fid.hognoob.se/stephov_107805.xml 195.128.126.241 -->
+<nmaprun scanner="nmap" args="nmap -Pn -f -F -sF -sV -O -T5 -A -vvv -oX /root/Documents/investigation.fid.hognoob.se/stephov_107805.xml 195.128.126.241" start="1554003383" startstr="Sat Mar 30 20:36:23 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="fin" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1554003383"/>
+<taskend task="NSE" time="1554003383"/>
+<taskbegin task="NSE" time="1554003383"/>
+<taskend task="NSE" time="1554003383"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1554003383"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1554003385"/>
+<taskbegin task="FIN Scan" time="1554003385"/>
+<taskend task="FIN Scan" time="1554003391" extrainfo="100 total ports"/>
+<taskbegin task="Service scan" time="1554003391"/>
+<taskprogress task="Service scan" time="1554003424" percent="99.00" remaining="1" etc="1554003424"/>
+<taskend task="Service scan" time="1554003573" extrainfo="100 services on 1 host"/>
+<taskbegin task="NSE" time="1554003585"/>
+<taskprogress task="NSE" time="1554003616" percent="98.71" remaining="1" etc="1554003616"/>
+<taskprogress task="NSE" time="1554003646" percent="99.47" remaining="1" etc="1554003646"/>
+<taskprogress task="NSE" time="1554003676" percent="99.78" remaining="1" etc="1554003676"/>
+<taskprogress task="NSE" time="1554003706" percent="99.81" remaining="1" etc="1554003706"/>
+<taskprogress task="NSE" time="1554003736" percent="99.84" remaining="1" etc="1554003736"/>
+<taskprogress task="NSE" time="1554003766" percent="99.85" remaining="1" etc="1554003766"/>
+<taskprogress task="NSE" time="1554003796" percent="99.87" remaining="1" etc="1554003796"/>
+<taskprogress task="NSE" time="1554003826" percent="99.90" remaining="1" etc="1554003826"/>
+<taskprogress task="NSE" time="1554003856" percent="99.91" remaining="1" etc="1554003856"/>
+<taskprogress task="NSE" time="1554003886" percent="99.92" remaining="1" etc="1554003886"/>
+<taskprogress task="NSE" time="1554003916" percent="99.93" remaining="1" etc="1554003916"/>
+<taskprogress task="NSE" time="1554003946" percent="99.93" remaining="1" etc="1554003946"/>
+<taskprogress task="NSE" time="1554003976" percent="99.96" remaining="1" etc="1554003976"/>
+<taskprogress task="NSE" time="1554004006" percent="99.97" remaining="1" etc="1554004006"/>
+<taskprogress task="NSE" time="1554004036" percent="99.98" remaining="1" etc="1554004036"/>
+<taskprogress task="NSE" time="1554004066" percent="99.99" remaining="1" etc="1554004066"/>
+<taskprogress task="NSE" time="1554004096" percent="99.99" remaining="1" etc="1554004096"/>
+<taskend task="NSE" time="1554004100"/>
+<taskbegin task="NSE" time="1554004100"/>
+<taskend task="NSE" time="1554004102"/>
+<host starttime="1554003385" endtime="1554004102"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="195.128.126.241" addrtype="ipv4"/>
+<hostnames>
+<hostname name="mail.energoresurs.net" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="7"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="9"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="13"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="21"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="22"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="23"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="25"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="smtp-commands" output="Couldn&apos;t establish connection on port 25"/></port>
+<port protocol="tcp" portid="26"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="37"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="53"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="79"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="finger" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="80"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="81"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="88"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="106"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="110"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="111"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="113"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="119"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="135"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="139"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="143"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="144"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="179"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="199"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="389"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="427"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="443"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="444"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="445"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="465"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="smtp-commands" output="Couldn&apos;t establish connection on port 465"/></port>
+<port protocol="tcp" portid="513"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="514"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="515"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="543"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="544"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="548"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="afp-serverinfo" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="554"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="587"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="smtp-commands" output="Couldn&apos;t establish connection on port 587"/></port>
+<port protocol="tcp" portid="631"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="646"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="873"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="990"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="993"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="995"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1025"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1026"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1027"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1028"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1029"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1110"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1433"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1720"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1723"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="pptp-version" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="1755"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="1900"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="2000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="2001"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="2049"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="2121"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="2717"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3128"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3306"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="tcp-response" reason_ttl="0"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=stephov_107805&#xa;Issuer: commonName=stephov_107805&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2019-03-24T21:57:29&#xa;Not valid after:  2019-09-23T21:57:29&#xa;MD5:   6052 491c 43c4 61e5 abb3 3b75 db9a b33f&#xa;SHA-1: fa39 afd3 5aa0 a937 220b 6dbf 5906 2e58 5e8a 99c1&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC/DCCAeSgAwIBAgIQIi8wPjcloa5GUAzWNMDROTANBgkqhkiG9w0BAQsFADAn&#xa;MSUwIwYDVQQDHhwAcwB0AGUAcABoAG8AdgBfADEAMAA3ADgAMAA1MB4XDTE5MDMy&#xa;NDIxNTcyOVoXDTE5MDkyMzIxNTcyOVowJzElMCMGA1UEAx4cAHMAdABlAHAAaABv&#xa;AHYAXwAxADAANwA4ADAANTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB&#xa;AJnPvKyC7AABk5LgGDOeCP0MK5cI5MhuM2sjD09vxFr+sVwph9MIA3baw6SIEbZy&#xa;OHE4TARj8yiBxFaxjR8/j2WxKWzUsvLgp2Gd0ybnmx/5C6nDM2W5nprMN73ByY1F&#xa;luvA4tDNo4bRJ92jS5XvEUQDxzXAWFBdmpVelVLR42Z+x9m0zBfUSV8TYTsY2qqk&#xa;hKvz2beSWUTdLr+Qki+409ZbTqGzJoGM89x//nrEx8lPu6uSvBU0nh/h359LEJhY&#xa;h1bTjNb5cEHIMpCWu/xOmlQQ9cRY2AV69ERUyeZPe7ZL7zrosdQhLRl36QyxYaul&#xa;xYK6YQwDJr9nl2JA/E+7q4ECAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEw&#xa;CwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQCWZUeKKJDRvRQSbxuJnaBZ&#xa;/PSGaQpoSfsRYe4CAGuqgGvuj+FkQgd4eOCnmTeSAnIm5Gapr5+/TNxzVOZQDkXt&#xa;4oOcCkHjxEFctu6g67K/c/jm/HcYAjvdd+MaqCJ1aeLYrqjTBraIU7twpUgEr0+s&#xa;rtu+TghQwzeLiiLDytoacGJweZ0yO1g8Emw3k3/m3d19Ey+CCND+820ytT/RzALC&#xa;NPAhLFEuLy3CIz8Il+eD0tvU1IU0OtloynLBb9tkGTafrXJqbInmH57QuQhquF48&#xa;WlUZYGInGyogCDBkQvRwurYVUgpeCNxexLmRhU4vwexMF0Zimg7qK342ArzMgyKi&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">\x00s\x00t\x00e\x00p\x00h\x00o\x00v\x00_\x001\x000\x007\x008\x000\x005</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00s\x00t\x00e\x00p\x00h\x00o\x00v\x00_\x001\x000\x007\x008\x000\x005</elem>
+</table>
+<table key="pubkey">
+<elem key="exponent">userdata: 0x5556c12e9708</elem>
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">userdata: 0x5556c1f8d0e8</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2019-03-24T21:57:29</elem>
+<elem key="notAfter">2019-09-23T21:57:29</elem>
+</table>
+<elem key="md5">6052491c43c461e5abb33b75db9ab33f</elem>
+<elem key="sha1">fa39afd35aa0a937220b6dbf59062e585e8a99c1</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC/DCCAeSgAwIBAgIQIi8wPjcloa5GUAzWNMDROTANBgkqhkiG9w0BAQsFADAn&#xa;MSUwIwYDVQQDHhwAcwB0AGUAcABoAG8AdgBfADEAMAA3ADgAMAA1MB4XDTE5MDMy&#xa;NDIxNTcyOVoXDTE5MDkyMzIxNTcyOVowJzElMCMGA1UEAx4cAHMAdABlAHAAaABv&#xa;AHYAXwAxADAANwA4ADAANTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB&#xa;AJnPvKyC7AABk5LgGDOeCP0MK5cI5MhuM2sjD09vxFr+sVwph9MIA3baw6SIEbZy&#xa;OHE4TARj8yiBxFaxjR8/j2WxKWzUsvLgp2Gd0ybnmx/5C6nDM2W5nprMN73ByY1F&#xa;luvA4tDNo4bRJ92jS5XvEUQDxzXAWFBdmpVelVLR42Z+x9m0zBfUSV8TYTsY2qqk&#xa;hKvz2beSWUTdLr+Qki+409ZbTqGzJoGM89x//nrEx8lPu6uSvBU0nh/h359LEJhY&#xa;h1bTjNb5cEHIMpCWu/xOmlQQ9cRY2AV69ERUyeZPe7ZL7zrosdQhLRl36QyxYaul&#xa;xYK6YQwDJr9nl2JA/E+7q4ECAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEw&#xa;CwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQCWZUeKKJDRvRQSbxuJnaBZ&#xa;/PSGaQpoSfsRYe4CAGuqgGvuj+FkQgd4eOCnmTeSAnIm5Gapr5+/TNxzVOZQDkXt&#xa;4oOcCkHjxEFctu6g67K/c/jm/HcYAjvdd+MaqCJ1aeLYrqjTBraIU7twpUgEr0+s&#xa;rtu+TghQwzeLiiLDytoacGJweZ0yO1g8Emw3k3/m3d19Ey+CCND+820ytT/RzALC&#xa;NPAhLFEuLy3CIz8Il+eD0tvU1IU0OtloynLBb9tkGTafrXJqbInmH57QuQhquF48&#xa;WlUZYGInGyogCDBkQvRwurYVUgpeCNxexLmRhU4vwexMF0Zimg7qK342ArzMgyKi&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="3986"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="4899"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5009"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5051"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5060"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5101"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5190"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5357"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5432"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5631"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5666"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5800"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5900"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="x11-access" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="6001"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="x11-access" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="6646"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="7070"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8008"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8009"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8080"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8081"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="mcafee-epo-agent" output="ePO Agent not found"/></port>
+<port protocol="tcp" portid="8443"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8888"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="9100"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="jetdirect" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9999"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="10000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="32768"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49152"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49153"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49154"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49155"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49156"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="49157"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="3389"/>
+<osfingerprint fingerprint="SCAN(V=7.70%E=4%D=3/30%OT=3389%CT=%CU=%PV=N%G=N%TM=5CA03886%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=104%GCD=1%ISR=105%TI=I%TS=7)&#xa;OPS(O1=M5B4NW0ST11%O2=M5B4NW0ST11%O3=M5B4NW0NNT11%O4=M5B4NW0ST11%O5=M5B4NW0ST11%O6=M5B4ST11)&#xa;WIN(W1=FA00%W2=FA00%W3=FA00%W4=FA00%W5=FA00%W6=FA00)&#xa;ECN(R=Y%DF=Y%TG=80%W=FA00%O=M5B4NW0NNS%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=N)&#xa;"/>
+</os>
+<uptime seconds="94488" lastboot="Fri Mar 29 18:33:34 2019"/>
+<tcpsequence index="262" difficulty="Good luck!" values="52C40C19,3CCB0B0A,3B689D3B,9467FB31,46AD7BF1,E77A835A"/>
+<ipidsequence class="Randomized" values="7999,799A,799B,799C,799D,7994"/>
+<tcptssequence class="other" values="2B1A624,2B1A62C,2B1A635,2B1A640,2B1A646,2B1A577"/>
+<trace>
+<hop ttl="1" ipaddr="195.128.126.241" rtt="102.07" host="mail.energoresurs.net"/>
+</trace>
+<times srtt="102071" rttvar="76918" to="300000"/>
+</host>
+<taskbegin task="NSE" time="1554004102"/>
+<taskend task="NSE" time="1554004102"/>
+<taskbegin task="NSE" time="1554004102"/>
+<taskend task="NSE" time="1554004102"/>
+<runstats><finished time="1554004102" timestr="Sat Mar 30 20:48:22 2019" elapsed="719.39" summary="Nmap done at Sat Mar 30 20:48:22 2019; 1 IP address (1 host up) scanned in 719.39 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
